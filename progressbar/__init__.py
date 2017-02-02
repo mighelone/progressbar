@@ -31,7 +31,7 @@ class ProgressBar(object):
         sys.stdout.write('\r')
         sys.stdout.write("[%-30s] %d%%" % ('=' * int(
             ceil(i / self._n * self._length)),
-            ceil(i + 1 / self._n * 100)))
+            (i + 1) / self._n * 100))
         sys.stdout.flush()
 
     def close(self):
